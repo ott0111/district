@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="District — Building the next generation of creators. An ecosystem helping creators build careers, businesses, products, and communities.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="District — Building the next generation of creators">
+  <meta property="og:description" content="District is an ecosystem that helps creators build careers, businesses, products, and communities.">
+  <meta property="og:type" content="website">
+  <title>District — Building the next generation of creators</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__logo">District</div>
+      <div class="loader__bar"><div class="loader__progress"></div></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav" role="banner">
+    <nav class="nav__container" aria-label="Main navigation">
+      <a href="#home" class="nav__logo" aria-label="District home">
+        <svg class="nav__logo-mark" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="10" height="10" rx="3" fill="currentColor" opacity="0.9"/>
+          <rect x="16" y="2" width="10" height="10" rx="3" fill="currentColor" opacity="0.5"/>
+          <rect x="2" y="16" width="10" height="10" rx="3" fill="currentColor" opacity="0.5"/>
+          <rect x="16" y="16" width="10" height="10" rx="3" fill="currentColor" opacity="0.9"/>
+        </svg>
+        <span>District</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#home" class="nav__link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav__link" data-section="about">About</a></li>
+        <li><a href="#talent" class="nav__link" data-section="talent">Talent</a></li>
+        <li><a href="#community" class="nav__link" data-section="community">Community</a></li>
+        <li><a href="#software" class="nav__link" data-section="software">Software</a></li>
+        <li><a href="#apparel" class="nav__link" data-section="apparel">Apparel</a></li>
+        <li><a href="#contact" class="nav__link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="#join" class="btn btn--primary btn--sm magnetic" data-magnetic>
+          <span>Join District</span>
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav__mobile" id="navMobile" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#home" class="nav__mobile-link">Home</a></li>
+        <li><a href="#about" class="nav__mobile-link">About</a></li>
+        <li><a href="#talent" class="nav__mobile-link">Talent</a></li>
+        <li><a href="#community" class="nav__mobile-link">Community</a></li>
+        <li><a href="#software" class="nav__mobile-link">Software</a></li>
+        <li><a href="#apparel" class="nav__mobile-link">Apparel</a></li>
+        <li><a href="#contact" class="nav__mobile-link">Contact</a></li>
+        <li><a href="#join" class="btn btn--primary btn--full">Join District</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="hero__bg" aria-hidden="true">
+        <canvas id="particles" class="hero__particles"></canvas>
+        <div class="hero__grid"></div>
+        <div class="hero__gradient hero__gradient--1"></div>
+        <div class="hero__gradient hero__gradient--2"></div>
+        <div class="hero__glow"></div>
+      </div>
+
+      <div class="container hero__content">
+        <div class="hero__badge reveal">
+          <span class="hero__badge-dot"></span>
+          Creator Ecosystem
+        </div>
+
+        <h1 class="hero__title reveal" id="hero-heading">
+          Building the next<br>
+          <span class="hero__title-accent">generation of creators.</span>
+        </h1>
+
+        <p class="hero__subtitle reveal">
+          District helps creators grow audiences, build businesses, launch brands, and create lasting careers.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a href="#join" class="btn btn--primary btn--lg magnetic" data-magnetic>
+            <span>Join District</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#talent" class="btn btn--ghost btn--lg magnetic" data-magnetic>
+            <span>Explore Talent</span>
+          </a>
+        </div>
+
+        <div class="hero__scroll reveal" aria-hidden="true">
+          <div class="hero__scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust / Stats -->
+    <section class="stats" id="stats" aria-label="District by the numbers">
+      <div class="container">
+        <ul class="stats__grid" role="list">
+          <li class="stats__item reveal">
+            <span class="stats__number" data-count="50" data-suffix="M+">0</span>
+            <span class="stats__label">Combined Creator Reach</span>
+          </li>
+          <li class="stats__item reveal">
+            <span class="stats__number" data-count="100" data-suffix="+">0</span>
+            <span class="stats__label">Creators Supported</span>
+          </li>
+          <li class="stats__item reveal">
+            <span class="stats__number stats__number--text" data-text="Millions">0</span>
+            <span class="stats__label">Views Generated</span>
+          </li>
+          <li class="stats__item reveal">
+            <span class="stats__number stats__number--text" data-text="Growing">0</span>
+            <span class="stats__label">Creator Ecosystem</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- What We Build -->
+    <section class="divisions" id="about" aria-labelledby="divisions-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">What We Build</span>
+          <h2 class="section-title" id="divisions-heading">One brand.<br>Every dimension of creator success.</h2>
+          <p class="section-desc">Everything lives under one brand — from talent management to software, community, and beyond.</p>
+        </div>
+
+        <div class="divisions__grid">
+
+          <article class="card card--division floating reveal" id="talent">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">District Talent</h3>
+            <p class="card__desc">Creator management, strategy, and growth — built for the long term.</p>
+            <a href="#creators" class="card__link">Learn more <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card card--division floating reveal" id="community">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3L2 9l10 6 10-6-10-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M2 15l10 6 10-6M2 12l10 6 10-6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">District Community</h3>
+            <p class="card__desc">The home for creators — connect, collaborate, and grow together.</p>
+            <a href="#join" class="card__link">Join community <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card card--division card--soon floating reveal" id="apparel">
+            <span class="badge badge--soon">Coming Soon</span>
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6 3l-2 4v13h16V7l-2-4H6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M6 7h12M9 7V5h6v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">District Apparel</h3>
+            <p class="card__desc">Premium clothing designed for creators who build culture.</p>
+          </article>
+
+          <article class="card card--division card--soon floating reveal" id="software">
+            <span class="badge badge--soon">Coming Soon</span>
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 12l3 3 5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">District Software</h3>
+            <p class="card__desc">Creator tools that power businesses, not just content.</p>
+          </article>
+
+          <article class="card card--division card--soon floating reveal">
+            <span class="badge badge--soon">Coming Soon</span>
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="5" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">District Events</h3>
+            <p class="card__desc">Online and IRL experiences that bring creators together.</p>
+          </article>
+
+          <article class="card card--division floating reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">District Partnerships</h3>
+            <p class="card__desc">Brand campaigns that align with creator values and audiences.</p>
+            <a href="#contact" class="card__link">Partner with us <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card card--division card--soon floating reveal">
+            <span class="badge badge--soon">Coming Soon</span>
+            <div class="card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19V5a2 2 0 012-2h12a2 2 0 012 2v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M8 7h8M8 11h8M8 15h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">District Programs</h3>
+            <p class="card__desc">Structured pathways for emerging creators to scale fast.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Why District -->
+    <section class="vision" aria-labelledby="vision-heading">
+      <div class="container">
+        <div class="vision__layout">
+          <div class="vision__content">
+            <span class="section-label reveal">Why District</span>
+            <h2 class="section-title reveal" id="vision-heading">District isn't another agency.</h2>
+            <p class="vision__lead reveal">We're building the infrastructure creators need to build real businesses — careers that last, brands that scale, and communities that thrive.</p>
+          </div>
+
+          <div class="vision__cards">
+            <div class="vision__card reveal">
+              <span class="vision__card-num" aria-hidden="true">01</span>
+              <h3 class="vision__card-title">Ecosystem, not silos</h3>
+              <p class="vision__card-desc">Talent, community, software, and commerce — unified under one vision instead of fragmented services.</p>
+            </div>
+            <div class="vision__card reveal">
+              <span class="vision__card-num" aria-hidden="true">02</span>
+              <h3 class="vision__card-title">Built for longevity</h3>
+              <p class="vision__card-desc">We optimize for careers, not viral moments. Real infrastructure for creators who think in decades.</p>
+            </div>
+            <div class="vision__card reveal">
+              <span class="vision__card-num" aria-hidden="true">03</span>
+              <h3 class="vision__card-title">Creator-first always</h3>
+              <p class="vision__card-desc">Every division exists to give creators more ownership, more leverage, and more control over their future.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Creators -->
+    <section class="creators" id="creators" aria-labelledby="creators-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Featured Creators</span>
+          <h2 class="section-title" id="creators-heading">Creators building<br>with District.</h2>
+        </div>
+
+        <div class="creators__grid">
+
+          <article class="creator-card floating reveal">
+            <div class="creator-card__avatar">
+              <div class="creator-card__avatar-inner" style="background: linear-gradient(135deg, #1a1a2e, #4F8CFF33);">
+                <span aria-hidden="true">AK</span>
+              </div>
+            </div>
+            <div class="creator-card__info">
+              <h3 class="creator-card__name">Alex Kim</h3>
+              <p class="creator-card__niche">Tech & Lifestyle</p>
+            </div>
+            <div class="creator-card__stats">
+              <div class="creator-card__stat">
+                <span class="creator-card__stat-value">2.4M</span>
+                <span class="creator-card__stat-label">Followers</span>
+              </div>
+              <div class="creator-card__stat">
+                <span class="creator-card__stat-value">180M</span>
+                <span class="creator-card__stat-label">Views</span>
+              </div>
+            </div>
+            <div class="creator-card__socials">
+              <a href="#" class="creator-card__social" aria-label="YouTube">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M15.3 4.5s-.2-1.4-.8-2C13.8 1.6 12.9 1.6 12.5 1.5 10.5 1.3 8 1.3 8 1.3s-2.5 0-4.5.2c-.4.1-1.3.1-2 1-.6.6-.8 2-.8 2S.5 6.2.5 8s.2 3.5.2 3.5.2 1.4.8 2c.7.9 1.7.9 2.1 1 1.5.1 6.4.2 6.4.2s2.5 0 4.5-.2c.4-.1 1.3-.1 2-1 .6-.6.8-2 .8-2s.2-1.5.2-3.5-.2-3.5zM6.5 10.5V5.5L10.5 8l-4 2.5z"/></svg>
+              </a>
+              <a href="#" class="creator-card__social" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5c2.1 0 2.4 0 3.2.1.8 0 1.3.2 1.7.3.4.2.8.4 1.1.8.4.3.6.7.8 1.1.1.4.3.9.3 1.7.1.8.1 1.1.1 3.2s0 2.4-.1 3.2c0 .8-.2 1.3-.3 1.7-.2.4-.4.8-.8 1.1-.3.4-.7.6-1.1.8-.4.1-.9.3-1.7.3-.8.1-1.1.1-3.2.1s-2.4 0-3.2-.1c-.8 0-1.3-.2-1.7-.3-.4-.2-.8-.4-1.1-.8-.4-.3-.6-.7-.8-1.1-.1-.4-.3-.9-.3-1.7-.1-.8-.1-1.1-.1-3.2s0-2.4.1-3.2c0-.8.2-1.3.3-1.7.2-.4.4-.8.8-1.1.3-.4.7-.6 1.1-.8.4-.1.9-.3 1.7-.3.8-.1 1.1-.1 3.2-.1zM8 4a4 4 0 100 8 4 4 0 000-8zm0 6.6a2.6 2.6 0 110-5.2 2.6 2.6 0 010 5.2zm4.1-6.8a1 1 0 100-2 1 1 0 000 2z"/></svg>
+              </a>
+              <a href="#" class="creator-card__social" aria-label="Twitter">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M12.6 2h2.2L9.9 7.1 15 14h-3.4l-2.7-3.5L5.6 14H3.4l4.1-4.7L2.5 2h3.5l2.4 3.2L12.6 2zm-.8 10.8h1.2L5.2 3.2H3.9l8 9.6z"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="creator-card floating reveal">
+            <div class="creator-card__avatar">
+              <div class="creator-card__avatar-inner" style="background: linear-gradient(135deg, #1a1a1a, #4F8CFF22);">
+                <span aria-hidden="true">MR</span>
+              </div>
+            </div>
+            <div class="creator-card__info">
+              <h3 class="creator-card__name">Maya Rivera</h3>
+              <p class="creator-card__niche">Fashion & Culture</p>
+            </div>
+            <div class="creator-card__stats">
+              <div class="creator-card__stat">
+                <span class="creator-card__stat-value">1.8M</span>
+                <span class="creator-card__stat-label">Followers</span>
+              </div>
+              <div class="creator-card__stat">
+                <span class="creator-card__stat-value">95M</span>
+                <span class="creator-card__stat-label">Views</span>
+              </div>
+            </div>
+            <div class="creator-card__socials">
+              <a href="#" class="creator-card__social" aria-label="YouTube">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M15.3 4.5s-.2-1.4-.8-2C13.8 1.6 12.9 1.6 12.5 1.5 10.5 1.3 8 1.3 8 1.3s-2.5 0-4.5.2c-.4.1-1.3.1-2 1-.6.6-.8 2-.8 2S.5 6.2.5 8s.2 3.5.2 3.5.2 1.4.8 2c.7.9 1.7.9 2.1 1 1.5.1 6.4.2 6.4.2s2.5 0 4.5-.2c.4-.1 1.3-.1 2-1 .6-.6.8-2 .8-2s.2-1.5.2-3.5-.2-3.5zM6.5 10.5V5.5L10.5 8l-4 2.5z"/></svg>
+              </a>
+              <a href="#" class="creator-card__social" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5c2.1 0 2.4 0 3.2.1.8 0 1.3.2 1.7.3.4.2.8.4 1.1.8.4.3.6.7.8 1.1.1.4.3.9.3 1.7.1.8.1 1.1.1 3.2s0 2.4-.1 3.2c0 .8-.2 1.3-.3 1.7-.2.4-.4.8-.8 1.1-.3.4-.7.6-1.1.8-.4.1-.9.3-1.7.3-.8.1-1.1.1-3.2.1s-2.4 0-3.2-.1c-.8 0-1.3-.2-1.7-.3-.4-.2-.8-.4-1.1-.8-.4-.3-.6-.7-.8-1.1-.1-.4-.3-.9-.3-1.7-.1-.8-.1-1.1-.1-3.2s0-2.4.1-3.2c0-.8.2-1.3.3-1.7.2-.4.4-.8.8-1.1.3-.4.7-.6 1.1-.8.4-.1.9-.3 1.7-.3.8-.1 1.1-.1 3.2-.1zM8 4a4 4 0 100 8 4 4 0 000-8zm0 6.6a2.6 2.6 0 110-5.2 2.6 2.6 0 010 5.2zm4.1-6.8a1 1 0 100-2 1 1 0 000 2z"/></svg>
+              </a>
+              <a href="#" class="creator-card__social" aria-label="TikTok">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M10.5 2.5c.3 1.2 1.2 2.2 2.5 2.5v2.2c-1 0-2-.3-2.8-.8v4.8c0 2.5-2 4.5-4.5 4.5S1.2 13.7 1.2 11.2 3.2 6.7 5.7 6.7c.3 0 .7 0 1 .1v2.4c-.3-.1-.7-.2-1-.2-1.2 0-2.2 1-2.2 2.2s1 2.2 2.2 2.2 2.2-1 2.2-2.2V2.5h2.6z"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="creator-card floating reveal">
+            <div class="creator-card__avatar">
+              <div class="creator-card__avatar-inner" style="background: linear-gradient(135deg, #0d1117, #4F8CFF33);">
+                <span aria-hidden="true">JT</span>
+              </div>
+            </div>
+            <div class="creator-card__info">
+              <h3 class="creator-card__name">Jordan Tate</h3>
+              <p class="creator-card__niche">Gaming & Entertainment</p>
+            </div>
+            <div class="creator-card__stats">
+              <div class="creator-card__stat">
+                <span class="creator-card__stat-value">3.1M</span>
+                <span class="creator-card__stat-label">Followers</span>
+              </div>
+              <div class="creator-card__stat">
+                <span class="creator-card__stat-value">420M</span>
+                <span class="creator-card__stat-label">Views</span>
+              </div>
+            </div>
+            <div class="creator-card__socials">
+              <a href="#" class="creator-card__social" aria-label="YouTube">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M15.3 4.5s-.2-1.4-.8-2C13.8 1.6 12.9 1.6 12.5 1.5 10.5 1.3 8 1.3 8 1.3s-2.5 0-4.5.2c-.4.1-1.3.1-2 1-.6.6-.8 2-.8 2S.5 6.2.5 8s.2 3.5.2 3.5.2 1.4.8 2c.7.9 1.7.9 2.1 1 1.5.1 6.4.2 6.4.2s2.5 0 4.5-.2c.4-.1 1.3-.1 2-1 .6-.6.8-2 .8-2s.2-1.5.2-3.5-.2-3.5zM6.5 10.5V5.5L10.5 8l-4 2.5z"/></svg>
+              </a>
+              <a href="#" class="creator-card__social" aria-label="Twitch">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 1.5L1 4v9.5h3.5V14H7l1.5 1.5H12l3-3V1.5H2zm10 9.5l-2 2H9v-2H7V4.5h5v6.5zm-2.5-5H10V8h-.5V6zM8 6h.5v2H8V6z"/></svg>
+              </a>
+              <a href="#" class="creator-card__social" aria-label="Twitter">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M12.6 2h2.2L9.9 7.1 15 14h-3.4l-2.7-3.5L5.6 14H3.4l4.1-4.7L2.5 2h3.5l2.4 3.2L12.6 2zm-.8 10.8h1.2L5.2 3.2H3.9l8 9.6z"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="creator-card floating reveal">
+            <div class="creator-card__avatar">
+              <div class="creator-card__avatar-inner" style="background: linear-gradient(135deg, #111, #4F8CFF22);">
+                <span aria-hidden="true">SL</span>
+              </div>
+            </div>
+            <div class="creator-card__info">
+              <h3 class="creator-card__name">Sofia Lin</h3>
+              <p class="creator-card__niche">Education & Business</p>
+            </div>
+            <div class="creator-card__stats">
+              <div class="creator-card__stat">
+                <span class="creator-card__stat-value">890K</span>
+                <span class="creator-card__stat-label">Followers</span>
+              </div>
+              <div class="creator-card__stat">
+                <span class="creator-card__stat-value">62M</span>
+                <span class="creator-card__stat-label">Views</span>
+              </div>
+            </div>
+            <div class="creator-card__socials">
+              <a href="#" class="creator-card__social" aria-label="YouTube">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M15.3 4.5s-.2-1.4-.8-2C13.8 1.6 12.9 1.6 12.5 1.5 10.5 1.3 8 1.3 8 1.3s-2.5 0-4.5.2c-.4.1-1.3.1-2 1-.6.6-.8 2-.8 2S.5 6.2.5 8s.2 3.5.2 3.5.2 1.4.8 2c.7.9 1.7.9 2.1 1 1.5.1 6.4.2 6.4.2s2.5 0 4.5-.2c.4-.1 1.3-.1 2-1 .6-.6.8-2 .8-2s.2-1.5.2-3.5-.2-3.5zM6.5 10.5V5.5L10.5 8l-4 2.5z"/></svg>
+              </a>
+              <a href="#" class="creator-card__social" aria-label="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 2C2.7 2 2 2.7 2 3.5v9c0 .8.7 1.5 1.5 1.5h9c.8 0 1.5-.7 1.5-1.5v-9c0-.8-.7-1.5-1.5-1.5h-9zM5.5 6.5h1.5v5H5.5v-5zm.75-2.5a1 1 0 110 2 1 1 0 010-2zM11 11.5h-1.5V9.5c0-.6-.1-1.3-.8-1.3-.8 0-.9.6-.9 1.2v2.1H6.3V6.5h1.4v.6c.2-.4.7-1 1.7-1 1.8 0 2.1 1.2 2.1 2.7v2.7z"/></svg>
+              </a>
+              <a href="#" class="creator-card__social" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5c2.1 0 2.4 0 3.2.1.8 0 1.3.2 1.7.3.4.2.8.4 1.1.8.4.3.6.7.8 1.1.1.4.3.9.3 1.7.1.8.1 1.1.1 3.2s0 2.4-.1 3.2c0 .8-.2 1.3-.3 1.7-.2.4-.4.8-.8 1.1-.3.4-.7.6-1.1.8-.4.1-.9.3-1.7.3-.8.1-1.1.1-3.2.1s-2.4 0-3.2-.1c-.8 0-1.3-.2-1.7-.3-.4-.2-.8-.4-1.1-.8-.4-.3-.6-.7-.8-1.1-.1-.4-.3-.9-.3-1.7-.1-.8-.1-1.1-.1-3.2s0-2.4.1-3.2c0-.8.2-1.3.3-1.7.2-.4.4-.8.8-1.1.3-.4.7-.6 1.1-.8.4-.1.9-.3 1.7-.3.8-.1 1.1-.1 3.2-.1zM8 4a4 4 0 100 8 4 4 0 000-8zm0 6.6a2.6 2.6 0 110-5.2 2.6 2.6 0 010 5.2zm4.1-6.8a1 1 0 100-2 1 1 0 000 2z"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Join CTA -->
+    <section class="cta" id="join" aria-labelledby="cta-heading">
+      <div class="cta__glow" aria-hidden="true"></div>
+      <div class="container cta__content">
+        <h2 class="cta__title reveal" id="cta-heading">Ready to build<br>something bigger?</h2>
+        <p class="cta__desc reveal">Join the ecosystem shaping the next generation of creators.</p>
+        <a href="#contact" class="btn btn--primary btn--xl magnetic reveal" data-magnetic>
+          <span>Join District</span>
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact__layout">
+          <div class="contact__info reveal">
+            <span class="section-label">Contact</span>
+            <h2 class="section-title" id="contact-heading">Let's build<br>together.</h2>
+            <p class="contact__desc">Whether you're a creator, brand, or partner — we'd love to hear from you.</p>
+            <a href="mailto:hello@district.co" class="contact__email">hello@district.co</a>
+          </div>
+          <form class="contact__form reveal" aria-label="Contact form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about yourself..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full magnetic" data-magnetic>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#home" class="footer__logo" aria-label="District home">
+          <svg class="nav__logo-mark" width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="10" height="10" rx="3" fill="currentColor" opacity="0.9"/>
+            <rect x="16" y="2" width="10" height="10" rx="3" fill="currentColor" opacity="0.5"/>
+            <rect x="2" y="16" width="10" height="10" rx="3" fill="currentColor" opacity="0.5"/>
+            <rect x="16" y="16" width="10" height="10" rx="3" fill="currentColor" opacity="0.9"/>
+          </svg>
+          <span>District</span>
+        </a>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#talent">Talent</a>
+          <a href="#community">Community</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Twitter / X">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M12.6 2h2.2L9.9 7.1 15 14h-3.4l-2.7-3.5L5.6 14H3.4l4.1-4.7L2.5 2h3.5l2.4 3.2L12.6 2zm-.8 10.8h1.2L5.2 3.2H3.9l8 9.6z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5c2.1 0 2.4 0 3.2.1.8 0 1.3.2 1.7.3.4.2.8.4 1.1.8.4.3.6.7.8 1.1.1.4.3.9.3 1.7.1.8.1 1.1.1 3.2s0 2.4-.1 3.2c0 .8-.2 1.3-.3 1.7-.2.4-.4.8-.8 1.1-.3.4-.7.6-1.1.8-.4.1-.9.3-1.7.3-.8.1-1.1.1-3.2.1s-2.4 0-3.2-.1c-.8 0-1.3-.2-1.7-.3-.4-.2-.8-.4-1.1-.8-.4-.3-.6-.7-.8-1.1-.1-.4-.3-.9-.3-1.7-.1-.8-.1-1.1-.1-3.2s0-2.4.1-3.2c0-.8.2-1.3.3-1.7.2-.4.4-.8.8-1.1.3-.4.7-.6 1.1-.8.4-.1.9-.3 1.7-.3.8-.1 1.1-.1 3.2-.1zM8 4a4 4 0 100 8 4 4 0 000-8zm0 6.6a2.6 2.6 0 110-5.2 2.6 2.6 0 010 5.2zm4.1-6.8a1 1 0 100-2 1 1 0 000 2z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 2C2.7 2 2 2.7 2 3.5v9c0 .8.7 1.5 1.5 1.5h9c.8 0 1.5-.7 1.5-1.5v-9c0-.8-.7-1.5-1.5-1.5h-9zM5.5 6.5h1.5v5H5.5v-5zm.75-2.5a1 1 0 110 2 1 1 0 010-2zM11 11.5h-1.5V9.5c0-.6-.1-1.3-.8-1.3-.8 0-.9.6-.9 1.2v2.1H6.3V6.5h1.4v.6c.2-.4.7-1 1.7-1 1.8 0 2.1 1.2 2.1 2.7v2.7z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M15.3 4.5s-.2-1.4-.8-2C13.8 1.6 12.9 1.6 12.5 1.5 10.5 1.3 8 1.3 8 1.3s-2.5 0-4.5.2c-.4.1-1.3.1-2 1-.6.6-.8 2-.8 2S.5 6.2.5 8s.2 3.5.2 3.5.2 1.4.8 2c.7.9 1.7.9 2.1 1 1.5.1 6.4.2 6.4.2s2.5 0 4.5-.2c.4-.1 1.3-.1 2-1 .6-.6.8-2 .8-2s.2-1.5.2-3.5-.2-3.5zM6.5 10.5V5.5L10.5 8l-4 2.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 District. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

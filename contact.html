@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact District — Partnership inquiries, creator applications, press inquiries, and general contact.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="Contact District">
+  <meta property="og:description" content="Get in touch with District for partnerships, creator applications, press inquiries, and general questions.">
+  <meta property="og:type" content="website">
+  <title>Contact District</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+
+  <!-- Loading Screen -->
+  <div id="site-loader"></div>
+
+  <!-- Navigation -->
+  <div id="site-nav"></div>
+
+  <main id="main">
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="page-hero-title">
+      <div class="page-hero__bg" aria-hidden="true">
+        <div class="page-hero__gradient"></div>
+        <div class="page-hero__grid"></div>
+      </div>
+      <div class="container page-hero__content">
+        <span class="page-hero__badge reveal">Contact</span>
+        <h1 class="page-hero__title reveal" id="page-hero-title">Let's build<br>together.</h1>
+        <p class="page-hero__subtitle reveal">Whether you're a creator, brand, or partner — we'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="content-section" aria-labelledby="contact-form-heading">
+      <div class="container">
+        <div class="contact__layout">
+          <div class="contact__info reveal">
+            <span class="section-label">Contact</span>
+            <h2 class="section-title" id="contact-form-heading">Get in touch.</h2>
+            <p class="contact__desc">Fill out the form and we'll get back to you within 24-48 hours. For specific inquiries, use the email addresses below.</p>
+            
+            <div class="content-text">
+              <p><strong>General Inquiries:</strong><br>
+              <a href="mailto:hello@district.co" class="contact__email">hello@district.co</a></p>
+              
+              <p><strong>Creator Applications:</strong><br>
+              <a href="mailto:talent@district.co" class="contact__email">talent@district.co</a></p>
+              
+              <p><strong>Brand Partnerships:</strong><br>
+              <a href="mailto:partnerships@district.co" class="contact__email">partnerships@district.co</a></p>
+              
+              <p><strong>Press Inquiries:</strong><br>
+              <a href="mailto:press@district.co" class="contact__email">press@district.co</a></p>
+            </div>
+          </div>
+          
+          <form class="contact__form reveal" aria-label="Contact form" id="apply">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="inquiry-type">Inquiry Type</label>
+              <select id="inquiry-type" name="inquiry-type" required style="width: 100%; padding: 0.875rem 1rem; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary);">
+                <option value="">Select one</option>
+                <option value="general">General Inquiry</option>
+                <option value="creator">Creator Application</option>
+                <option value="partnership">Brand Partnership</option>
+                <option value="community">Community Join</option>
+                <option value="press">Press Inquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about yourself..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full magnetic" data-magnetic>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="content-section content-section--alt" aria-labelledby="social-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Connect</span>
+          <h2 class="section-title" id="social-heading">Follow us.</h2>
+        </div>
+        <div class="footer__socials reveal" style="justify-content: flex-start;">
+          <a href="#" class="footer__social" aria-label="Twitter / X">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M12.6 2h2.2L9.9 7.1 15 14h-3.4l-2.7-3.5L5.6 14H3.4l4.1-4.7L2.5 2h3.5l2.4 3.2L12.6 2zm-.8 10.8h1.2L5.2 3.2H3.9l8 9.6z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5c2.1 0 2.4 0 3.2.1.8 0 1.3.2 1.7.3.4.2.8.4 1.1.8.4.3.6.7.8 1.1.1.4.3.9.3 1.7.1.8.1 1.1.1 3.2s0 2.4-.1 3.2c0 .8-.2 1.3-.3 1.7-.2.4-.4.8-.8 1.1-.3.4-.7.6-1.1.8-.4.1-.9.3-1.7.3-.8.1-1.1.1-3.2.1s-2.4 0-3.2-.1c-.8 0-1.3-.2-1.7-.3-.4-.2-.8-.4-1.1-.8-.4-.3-.6-.7-.8-1.1-.1-.4-.3-.9-.3-1.7-.1-.8-.1-1.1-.1-3.2s0-2.4.1-3.2c0-[0.8.2-1.3.3-1.7.2-.4.4-.8.8-1.1.3-.4.7-.6 1.1-.8.4-.1.9-.3 1.7-.3.8-.1 1.1-.1 3.2-.1zM8 4a4 4 0 100 8 4 4 0 000-8zm0 6.6a2.6 2.6 0 110-5.2 2.6 2.6 0 010 5.2zm4.1-6.8a1 1 0 100-2 1 1 0 000 2z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 2C2.7 2 2 2.7 2 3.5v9c0 .8.7 1.5 1.5 1.5h9c.8 0 1.5-.7 1.5-1.5v-9c0-.8-.7-1.5-1.5-1.5h-9zM5.5 6.5h1.5v5H5.5v-5zm.75-2.5a1 1 0 110 2 1 1 0 010-2zM11 11.5h-1.5V9.5c0-.6-.1-1.3-.8-1.3-.8 0-.9.6-.9 1.2v2.1H6.3V6.5h1.4v.6c.2-.4.7-1 1.7-1 1.8 0 2.1 1.2 2.1 2.7v2.7z"/></svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M15.3 4.5s-.2-1.4-.8-2C13.8 1.6 12.9 1.6 12.5 1.5 10.5 1.3 8 1.3 8 1.3s-2.5 0-4.5.2c-.4.1-1.3.1-2 1-.6.6-.8 2-.8 2S.5 6.2.5 8s.2 3.5.2 3.5.2 1.4.8 2c.7.9 1.7.9 2.1 1 1.5.1 6.4.2 6.4.2s2.5 0 4.5-.2c.4-.1 1.3-.1 2-1 .6-.6.8-2 .8-2s.2-1.5.2-3.5-.2-3.5zM6.5 10.5V5.5L10.5 8l-4 2.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-label="Call to action">
+      <div class="cta__glow" aria-hidden="true"></div>
+      <div class="container cta__content">
+        <h2 class="cta__title reveal">Ready to start<br>the conversation?</h2>
+        <p class="cta__desc reveal">We're here to help you build something bigger.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="site-footer"></div>
+
+  <script src="js/components.js" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
