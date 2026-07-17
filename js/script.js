@@ -71,6 +71,16 @@
       lastScroll = scrollY;
     }, { passive: true });
 
+    // Add solid background when nav links are clicked
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        nav.classList.add('nav--solid');
+        setTimeout(() => {
+          nav.classList.remove('nav--solid');
+        }, 2000);
+      });
+    });
+
     const sections = document.querySelectorAll('section[id]');
     const observer = new IntersectionObserver(
       (entries) => {
@@ -100,6 +110,13 @@
       navToggle.setAttribute('aria-expanded', isOpen);
       navMobile.setAttribute('aria-hidden', !isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
+      
+      // Add solid background when menu is open
+      if (isOpen) {
+        nav.classList.add('nav--solid');
+      } else {
+        nav.classList.remove('nav--solid');
+      }
     }
 
     navToggle.addEventListener('click', () => toggleMenu());

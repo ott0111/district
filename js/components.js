@@ -6,20 +6,14 @@
 (function () {
   'use strict';
 
-  const LOGO_SVG = `<svg class="nav__logo-mark" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-    <rect x="2" y="2" width="10" height="10" rx="3" fill="currentColor" opacity="0.9"/>
-    <rect x="16" y="2" width="10" height="10" rx="3" fill="currentColor" opacity="0.5"/>
-    <rect x="2" y="16" width="10" height="10" rx="3" fill="currentColor" opacity="0.5"/>
-    <rect x="16" y="16" width="10" height="10" rx="3" fill="currentColor" opacity="0.9"/>
-  </svg>`;
+  const LOGO_IMG = `<img src="images/logo.png" alt="District Logo" class="nav__logo-mark" width="28" height="28">`;
 
   const NAV_ITEMS = [
     { id: 'home', label: 'Home', href: 'index.html' },
     { id: 'about', label: 'About', href: 'about.html' },
     { id: 'talent', label: 'Talent', href: 'talent.html' },
     { id: 'community', label: 'Community', href: 'community.html' },
-    { id: 'divisions', label: 'Divisions', href: 'divisions.html' },
-    { id: 'resources', label: 'Resources', href: 'resources.html' },
+    { id: 'software', label: 'Software', href: 'software.html' },
     { id: 'contact', label: 'Contact', href: 'contact.html' },
   ];
 
@@ -51,9 +45,14 @@
     const isHome = active === 'home';
     const navClass = isHome ? 'nav' : 'nav scrolled';
 
-    const links = NAV_ITEMS.map(
+    const mainLinks = NAV_ITEMS.slice(0, 4).map(
       (item) =>
         `<li><a href="${item.href}" class="nav__link${active === item.id ? ' active' : ''}">${item.label}</a></li>`
+    ).join('');
+
+    const secondaryLinks = NAV_ITEMS.slice(4).map(
+      (item) =>
+        `<li><a href="${item.href}" class="nav__link nav__link--secondary">${item.label}</a></li>`
     ).join('');
 
     const mobileLinks = NAV_ITEMS.map(
@@ -64,10 +63,11 @@
       <header class="${navClass}" id="nav" role="banner">
         <nav class="nav__container" aria-label="Main navigation">
           <a href="index.html" class="nav__logo" aria-label="District home">
-            ${LOGO_SVG}
+            ${LOGO_IMG}
             <span>District</span>
           </a>
-          <ul class="nav__links" role="list">${links}</ul>
+          <ul class="nav__links nav__links--main" role="list">${mainLinks}</ul>
+          <ul class="nav__links nav__links--secondary" role="list">${secondaryLinks}</ul>
           <div class="nav__actions">
             <a href="contact.html#apply" class="btn btn--primary btn--sm magnetic" data-magnetic>
               <span>Join District</span>
@@ -96,7 +96,7 @@
           <div class="footer__grid">
             <div class="footer__brand">
               <a href="index.html" class="footer__logo" aria-label="District home">
-                ${LOGO_SVG.replace('width="28" height="28"', 'width="24" height="24"')}
+                ${LOGO_IMG.replace('width="28" height="28"', 'width="24" height="24"')}
                 <span>District</span>
               </a>
               <p class="footer__tagline">Building the next generation of creators.</p>
@@ -105,7 +105,7 @@
                   <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M12.6 2h2.2L9.9 7.1 15 14h-3.4l-2.7-3.5L5.6 14H3.4l4.1-4.7L2.5 2h3.5l2.4 3.2L12.6 2zm-.8 10.8h1.2L5.2 3.2H3.9l8 9.6z"/></svg>
                 </a>
                 <a href="#" class="footer__social" aria-label="Instagram">
-                  <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5c2.1 0 2.4 0 3.2.1.8 0 1.3.2 1.7.3.4.2.8.4 1.1.8.4.3.6.7.8 1.1.1.4.3.9.3 1.7.1.8.1 1.1.1 3.2s0 2.4-.1 3.2c0 .8-.2 1.3-.3 1.7-.2.4-.4.8-.8 1.1-.3.4-.7.6-1.1.8-.4.1-.9.3-1.7.3-.8.1-1.1.1-3.2.1s-2.4 0-3.2-.1c-.8 0-1.3-.2-1.7-.3-.4-.2-.8-.4-1.1-.8-.4-.3-.6-.7-.8-1.1-.1-.4-.3-.9-.3-1.7-.1-.8-.1-1.1-.1-3.2s0-2.4.1-3.2c0-.8.2-1.3.3-1.7.2-.4.4-.8.8-1.1.3-.4.7-.6 1.1-.8.4-.1.9-.3 1.7-.3.8-.1 1.1-.1 3.2-.1zM8 4a4 4 0 100 8 4 4 0 000-8zm0 6.6a2.6 2.6 0 110-5.2 2.6 2.6 0 010 5.2zm4.1-6.8a1 1 0 100-2 1 1 0 000 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5c2.1 0 2.4 0 3.2.1.8 0 1.3.2 1.7.3.4.2.8.4 1.1.8.4.3.6.7.8 1.1.1.4.3.9.3 1.7.1.8.1 1.1.1 3.2s0 2.4-.1 3.2c0 .8-.2 1.3-.3 1.7-.2.4-.4.8-.8 1.1-.3.4-.7.6-1.1.8-.4.1-.9.3-1.7.3-.8.1-1.1.1-3.2.1s-2.4 0-3.2-.1c-.8 0-1.3-.2-1.7-.3-.4-.2-.8-.4-1.1-.8-.4-.3-.6-.7-.8-1.1-.1-.4-.3-.9-.3-1.7-.1-.8-.1-1.1-.1-3.2s0-2.4.1-3.2c0-.8.2-1.3.3-1.7.2-.4.4-.8.8-1.1.3-.4.7-.6-1.1-.8-.4-.1-.9-.3-1.7-.3.8-.1 1.1-.1 3.2-.1zM8 4a4 4 0 100 8 4 4 0 000-8zm0 6.6a2.6 2.6 0 110-5.2 2.6 2.6 0 010 5.2zm4.1-6.8a1 1 0 100-2 1 1 0 000 2z"/></svg>
                 </a>
                 <a href="#" class="footer__social" aria-label="LinkedIn">
                   <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 2C2.7 2 2 2.7 2 3.5v9c0 .8.7 1.5 1.5 1.5h9c.8 0 1.5-.7 1.5-1.5v-9c0-.8-.7-1.5-1.5-1.5h-9zM5.5 6.5h1.5v5H5.5v-5zm.75-2.5a1 1 0 110 2 1 1 0 010-2zM11 11.5h-1.5V9.5c0-.6-.1-1.3-.8-1.3-.8 0-.9.6-.9 1.2v2.1H6.3V6.5h1.4v.6c.2-.4.7-1 1.7-1 1.8 0 2.1 1.2 2.1 2.7v2.7z"/></svg>
@@ -151,10 +151,28 @@
     return `
       <div class="loader" id="loader" aria-hidden="true">
         <div class="loader__inner">
-          <div class="loader__logo">District</div>
+          <div class="loader__logo">
+            <img src="images/logo.png" alt="District Logo">
+          </div>
           <div class="loader__bar"><div class="loader__progress"></div></div>
         </div>
       </div>`;
+  }
+
+  function renderHeaderBanner() {
+    return `
+      <header class="header-banner" role="banner">
+        <div class="header-banner__content">
+          <div class="header-banner__logo">
+            <img src="images/logo.png" alt="District Logo">
+          </div>
+          <div class="header-banner__text">
+            <h1 class="header-banner__title">DISTRICT</h1>
+            <p class="header-banner__subtitle">THE LEADING FORCE IN INNOVATION</p>
+          </div>
+          <div class="header-banner__est">EST. 2026</div>
+        </div>
+      </header>`;
   }
 
   function renderPageHero({ badge, title, subtitle, large }) {
@@ -192,10 +210,12 @@
   function inject() {
     const active = getActivePage();
     const loaderEl = document.getElementById('site-loader');
+    const headerBannerEl = document.getElementById('site-header-banner');
     const navEl = document.getElementById('site-nav');
     const footerEl = document.getElementById('site-footer');
 
     if (loaderEl) loaderEl.innerHTML = renderLoader();
+    if (headerBannerEl) headerBannerEl.innerHTML = renderHeaderBanner();
     if (navEl) navEl.innerHTML = renderNav(active);
     if (footerEl) footerEl.innerHTML = renderFooter();
   }
